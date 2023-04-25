@@ -1,0 +1,109 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* khi thêm bất cứ padding hay border vẫn không ảnh hương width và height gốc */
+}
+/* nên viết font trên html */
+html {
+  font-family: Helvetica, Arial, sans-serif;
+}
+/* 
+1. Vị trí
+2. Màu sắc
+3. kKích thước
+4. Kiểu dáng
+*/
+
+header {
+  height: 54px;
+  background-color: black;
+  /* display: flex; */
+}
+#nav {
+  display: inline-block;
+}
+
+#nav > li {
+  display: inline-block;
+  /* inline cùng 1 hàng còn block là giữ lại tính chất khối */
+  position: relative;
+  padding: 0 15px;
+}
+
+#nav > li > a {
+  color: white;
+  text-transform: uppercase;
+}
+
+#nav li a {
+  text-decoration: none; /*bỏ gạch chân */
+  line-height: 54px;
+  display: block; /*xét inline không ăn theo chiều cao rộng 
+    nên  thêm block vào để nó ăn theo*/
+  padding: 0 24px;
+}
+
+.nav-icon {
+  font-size: small;
+}
+
+#nav > li:hover > a {
+  /* thằng con của thẻ a sẽ được hưởng thụ*/
+  background-color: #bebebe;
+  color: black;
+}
+/* ===================subnav================= */
+
+#nav .subnav {
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  /* Kéo dài thẻ li ở subnav ra */
+  min-width: 155px;
+  /* nếu position: absolute không đẹp thì phải sử dụng từng thuộc tính top left */
+  top: 100%;
+  left: 12%;
+}
+
+#nav .subnav li {
+  /* Để thằng con dài ra ở subnav */
+  display: block;
+}
+#nav .subnav a {
+  color: black;
+  padding-left: 12px;
+  line-height: 40px; /*để cho dòng chữ nhỏ lại*/
+}
+
+.subnav > li:hover a {
+  /* thằng con của thẻ a sẽ được hưởng thụ*/
+  background-color: #bebebe;
+  color: black;
+}
+
+/*Khi di chuột vào li thì add các thuộc tính của thẻ sau li vào*/
+#nav > li:hover .subnav {
+  display: block;
+}
+
+/* ======================= search ======================== */
+#search {
+  color: white;
+  float: right;
+  padding: 0 22px;
+   /*đổi trỏ chuột thành bàn tay*/
+   cursor: pointer;
+}
+#search i {
+  font-size: 14px;
+  line-height: 54px;
+}
+#search:hover {
+  background-color: #f44336;
+ 
+}
+/*====================== slider =========================*/
+#slider {
+}
