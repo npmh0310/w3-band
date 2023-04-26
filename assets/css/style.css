@@ -18,6 +18,12 @@ html {
 header {
   height: 54px;
   background-color: black;
+  /*dùng để lăn thanh nhưng vẫn cuộn header theo*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1; /* để header nổi lên trên ảnh*/
   /* display: flex; */
 }
 #nav {
@@ -28,7 +34,8 @@ header {
   display: inline-block;
   /* inline cùng 1 hàng còn block là giữ lại tính chất khối */
   position: relative;
-  padding: 0 15px;
+  /* padding: 0 15px; */
+  padding-right: 15px;
 }
 
 #nav > li > a {
@@ -53,6 +60,11 @@ header {
   background-color: #bebebe;
   color: black;
 }
+
+#nax {
+  padding-left: 0px;
+}
+
 /* ===================subnav================= */
 
 #nav .subnav {
@@ -64,7 +76,6 @@ header {
   min-width: 155px;
   /* nếu position: absolute không đẹp thì phải sử dụng từng thuộc tính top left */
   top: 100%;
-  left: 12%;
 }
 
 #nav .subnav li {
@@ -93,8 +104,8 @@ header {
   color: white;
   float: right;
   padding: 0 22px;
-   /*đổi trỏ chuột thành bàn tay*/
-   cursor: pointer;
+  /*đổi trỏ chuột thành bàn tay*/
+  cursor: pointer;
 }
 #search i {
   font-size: 14px;
@@ -102,8 +113,41 @@ header {
 }
 #search:hover {
   background-color: #f44336;
- 
 }
 /*====================== slider =========================*/
 #slider {
+  margin-top: 54px;
+  padding-top: 50%; /*50% chiều ngang của chính nó*/
+  background: url("/w3_band/assets/images/la.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+
+  /* Viết tắt: background: url('/w3_band/assets/images/la.jpg') top center / cover no-repeat; */
+
+  position: relative;
+}
+
+#slider .text {
+  color: #fff;
+  justify-content: center;
+  position: absolute;
+  bottom: 47px;
+  left: 50%;
+  /* căn giữa */
+  transform: translateX(-50%);
+  text-align: center;
+
+  /* Cách căn giữa 2
+  xét thằng .text ni width = 100% thì tự căn giữa từ text-align: center 
+  hoặc xét right: 0 và left: 0*/
+}
+h3 {
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+
+/* ============================= content========================== */
+#content {
+  height: 1000px;
 }
