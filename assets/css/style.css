@@ -118,7 +118,7 @@ header {
 #slider {
   margin-top: 54px;
   padding-top: 50%; /*50% chiều ngang của chính nó*/
-  background: url("/w3_band/assets/images/la.jpg");
+  background: url("/assets/images/la.jpg");
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
@@ -150,4 +150,37 @@ h3 {
 /* ============================= content========================== */
 #content {
   height: 1000px;
+}
+
+#content .content-section {
+  width: 800px;
+  text-align: center;
+  /* căn giữa thẻ div này */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 64px 0;
+}
+
+.section-heading {
+  text-transform: uppercase;
+  font-family: Arial, sans-serif;
+  padding: 15px 0;
+  font-size: 30px;
+  font-weight: 300; /*làm mỏng độ in đậm của chữ*/
+  letter-spacing: 3px; /*để khoảng cách giữa từng chữ cách ra*/
+}
+.section-sub-heading {
+  color: #828282;
+  font-size: 15px;
+  margin: 10px 0 25px 0;
+  font-style: italic;
+
+  /* opacity: 0-1; độ làm mờ */
+}
+
+.about-text {
+  font-size: 15px;
+  margin: 10px 0 25px 0;
+  line-height: 180%; /*xét khoảng cách giữa các dòng - độ cao của 1 dòng*/
+  text-align: justify; /*căn đều 2 bên*/
 }
